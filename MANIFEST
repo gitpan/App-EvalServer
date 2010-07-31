@@ -19,6 +19,7 @@ lib/App/EvalServer/Language/Python.pm
 lib/App/EvalServer/Language/Ruby.pm
 t/compile.t
 t/langs/deparse.t
+t/langs/fail.t
 t/langs/perl.t
 t/release-pod-syntax.t
 utils/developer/git-pre-commit

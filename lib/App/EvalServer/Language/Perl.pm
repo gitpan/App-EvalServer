@@ -3,23 +3,19 @@ BEGIN {
   $App::EvalServer::Language::Perl::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Language::Perl::VERSION = '0.01';
+  $App::EvalServer::Language::Perl::VERSION = '0.02';
 }
 
 use strict;
 use warnings;
 
-=pod
-
 # TODO: attempt to load the utf8/unicode libraries.
-use utf8;
-use charnames qw(:full);
-BEGIN {
-    eval "\$\343\201\257 = 42";
-    uc "\x{666}";
-}
-
-=cut
+#use utf8;
+#use charnames qw(:full);
+#BEGIN {
+#    eval "\$\343\201\257 = 42";
+#    uc "\x{666}";
+#}
 
 sub evaluate {
     my ($package, $code) = @_;

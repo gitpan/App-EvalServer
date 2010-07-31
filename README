@@ -40,7 +40,8 @@ METHODS
 
     'daemonize', daemonize the process
 
-    'unsafe', don't chroot or set resource limits (no root needed)
+    'unsafe', don't chroot or set resource limits (no root needed). Default
+    is false.
 
   "run"
     Runs the server. Takes no arguments.
@@ -82,9 +83,8 @@ OUTPUT
 
     *   'sys_time', the sys time taken by the evaluating process.
 
-    If an error occurred before the code could be evaluated, the 'result'
-    key will not be present. Instead, there will be an 'error' key detailing
-    what went wrong.
+    If an error occurred before the code could be evaluated, the only key
+    you will get is 'error', which tells you what went wrong.
 
 AUTHOR
     Hinrik Örn Sigurðsson (hinrik.sig@gmail.com), "buu", and probably others

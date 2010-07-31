@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::VERSION = '0.01';
+  $App::EvalServer::VERSION = '0.02';
 }
 
 use strict;
@@ -22,7 +22,7 @@ use POE::Filter::Stream;
 use POE::Wheel::SocketFactory;
 use POE::Wheel::ReadWrite;
 use POE::Wheel::Run;
-use POSIX qw<mkfifo tmpnam>;
+use POSIX qw<mkfifo>;
 use Time::HiRes qw<time>;
 
 my @inc = map { +'-I' => abs_path($_) } @INC;
@@ -318,7 +318,13 @@ sub eval_sig_child {
 
     if (defined $self->{clients}{$eval->{client_id}}) {
         my $client = $self->{clients}{$eval->{client_id}};
-        $client->put($eval->{return});
+
+        if ($eval->{return}{error}) {
+            $client->put({ error => $eval->{return}{error} });
+        }
+        else {
+            $client->put($eval->{return});
+        }
     }
 
     return;
@@ -395,7 +401,8 @@ B<'limit'>, resource limit in megabytes (default: 50)
 
 B<'daemonize'>, daemonize the process
 
-B<'unsafe'>, don't chroot or set resource limits (no root needed)
+B<'unsafe'>, don't chroot or set resource limits (no root needed). Default is
+false.
 
 =head2 C<run>
 
@@ -445,8 +452,8 @@ L<C<(getrusage())[2]>|BSD::Resource/getrusage>).
 
 =back
 
-If an error occurred before the code could be evaluated, the B<'result'> key
-will not be present. Instead, there will be an B<'error'> key detailing what
+If an error occurred before the code could be evaluated, the only key you
+will get is B<'error'>, which tells you what
 went wrong.
 
 =head1 AUTHOR

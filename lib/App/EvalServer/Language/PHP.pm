@@ -1,9 +1,9 @@
-package App::EvalServer::Language::Lua;
+package App::EvalServer::Language::PHP;
 BEGIN {
-  $App::EvalServer::Language::Lua::AUTHORITY = 'cpan:HINRIK';
+  $App::EvalServer::Language::PHP::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Language::Lua::VERSION = '0.01';
+  $App::EvalServer::Language::PHP::VERSION = '0.02';
 }
 
 use strict;
