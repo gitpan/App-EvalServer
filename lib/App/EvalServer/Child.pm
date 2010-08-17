@@ -3,11 +3,11 @@ BEGIN {
   $App::EvalServer::Child::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Child::VERSION = '0.02';
+  $App::EvalServer::Child::VERSION = '0.03';
 }
 
 use strict;
-use warnings;
+use warnings FATAL => 'all';
 use BSD::Resource;
 use POE::Filter::Reference;
 use POSIX qw<setgid>;

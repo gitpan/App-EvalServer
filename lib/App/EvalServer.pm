@@ -3,11 +3,11 @@ BEGIN {
   $App::EvalServer::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::VERSION = '0.02';
+  $App::EvalServer::VERSION = '0.03';
 }
 
 use strict;
-use warnings;
+use warnings FATAL => 'all';
 
 # we want instant child process reaping
 sub POE::Kernel::USE_SIGCHLD () { return 1 }

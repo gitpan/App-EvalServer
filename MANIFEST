@@ -1,6 +1,7 @@
 Changes
 LICENSE
 MANIFEST
+MANIFEST.SKIP
 META.json
 META.yml
 Makefile.PL
@@ -22,4 +23,3 @@ t/langs/deparse.t
 t/langs/fail.t
 t/langs/perl.t
 t/release-pod-syntax.t
-utils/developer/git-pre-commit
