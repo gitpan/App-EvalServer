@@ -6,7 +6,6 @@ META.json
 META.yml
 Makefile.PL
 README
-README.pod
 bin/evalserver
 dist.ini
 lib/App/EvalServer.pm
