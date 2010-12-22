@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::Language::Python::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Language::Python::VERSION = '0.04';
+  $App::EvalServer::Language::Python::VERSION = '0.05';
 }
 
 use strict;

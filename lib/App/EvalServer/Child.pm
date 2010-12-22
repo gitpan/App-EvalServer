@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::Child::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Child::VERSION = '0.04';
+  $App::EvalServer::Child::VERSION = '0.05';
 }
 
 use strict;
@@ -17,6 +17,7 @@ use POSIX qw<setgid>;
 getrusage();
 use Carp::Heavy;
 use Storable 'nfreeze'; nfreeze([]);
+use File::Glob;
 
 my $PIPE;
 my $FILTER;
@@ -149,7 +150,7 @@ sub _be_safe {
 
 =head1 NAME
 
-App::EvalServer::Child - Evaluato code in a safe child process
+App::EvalServer::Child - Evaluate code in a safe child process
 
 =head1 SYNOPSIS
 

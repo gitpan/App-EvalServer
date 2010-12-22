@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::Language::Lua::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Language::Lua::VERSION = '0.04';
+  $App::EvalServer::Language::Lua::VERSION = '0.05';
 }
 
 use strict;

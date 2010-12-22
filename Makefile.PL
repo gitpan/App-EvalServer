@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
- BEGIN { require 5.008; } 
+BEGIN { require 5.008; }
 
 use ExtUtils::MakeMaker 6.31;
 
@@ -36,7 +36,7 @@ my %WriteMakefileArgs = (
     'POE::Wheel::SocketFactory' => '0',
     'Proc::Daemon' => '0'
   },
-  'VERSION' => '0.04',
+  'VERSION' => '0.05',
   'test' => {
     'TESTS' => 't/*.t t/langs/*.t'
   }
