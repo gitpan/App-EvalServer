@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::Language::Ruby::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Language::Ruby::VERSION = '0.05';
+  $App::EvalServer::Language::Ruby::VERSION = '0.06';
 }
 
 use strict;

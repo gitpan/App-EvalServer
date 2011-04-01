@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::Language::PHP::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Language::PHP::VERSION = '0.05';
+  $App::EvalServer::Language::PHP::VERSION = '0.06';
 }
 
 use strict;
