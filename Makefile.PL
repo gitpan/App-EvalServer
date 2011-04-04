@@ -36,7 +36,7 @@ my %WriteMakefileArgs = (
     'POE::Wheel::SocketFactory' => '0',
     'Proc::Daemon' => '0'
   },
-  'VERSION' => '0.06',
+  'VERSION' => '0.07',
   'test' => {
     'TESTS' => 't/*.t t/langs/*.t'
   }

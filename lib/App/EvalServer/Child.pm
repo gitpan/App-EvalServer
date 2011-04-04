@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::Child::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Child::VERSION = '0.06';
+  $App::EvalServer::Child::VERSION = '0.07';
 }
 
 use strict;

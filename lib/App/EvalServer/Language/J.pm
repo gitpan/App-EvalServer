@@ -3,7 +3,7 @@ BEGIN {
   $App::EvalServer::Language::J::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $App::EvalServer::Language::J::VERSION = '0.06';
+  $App::EvalServer::Language::J::VERSION = '0.07';
 }
 
 use strict;
